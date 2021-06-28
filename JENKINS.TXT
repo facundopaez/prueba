@@ -1,0 +1,6 @@
+##solucionar problemas de shell
+administrar jenkins-->>configurar sistema-->>shell
+colocar C:\Program Files\GIT\bin\sh.exe
+
+###por problema de plugins
+desinstalar los javas e instalar de nuevo
