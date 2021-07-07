@@ -1,36 +1,31 @@
-import groovy.json.JsonSlurperClassic
-
-def jsonParse(def json) {
-    new groovy.json.JsonSlurperClassic().parseText(json)
-}
 pipeline {
-  agent { label 'master' }
-  environment {
-    appName = "variable" 
-  }
-  stages {
+    agent any
 
- stage("paso 1"){
-     
-      steps {
-          script {			
-           sh "echo 'hola mundo'"
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
         }
-      }
+        stage('Test') {
+            steps {
+                echo 'test'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploy'
+            }
+        }
+        stage('produccion') {
+            steps {
+                echo 'produccion'
+            }
+        }
+        stage('release') {
+            steps {
+                echo 'release'
+            }
+        }
     }
-  }
-  post {
-      always {          
-          deleteDir()
-           sh "echo 'fase always'"
-      }
-      success {
-            sh "echo 'fase success'"
-        }
-
-      failure {
-            sh "echo 'fase failure'"
-      }
-      
-  }
-}  
+}
