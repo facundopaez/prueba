@@ -20,8 +20,8 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-        USER: ${{ secrets.NAME_QA }}
-        USER2: ${{ secrets.NOMBRE_QA }}
+        USER: ${{ secrets.NOMBRE_QA }}
+        USER2: ${{ vars.NOMBRE_QA }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
