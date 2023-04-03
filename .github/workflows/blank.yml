@@ -2,7 +2,7 @@
 
 name: CI
 env:
-  VAR: "DEV"
+  VAR: ${{ secrets.name_dev }}
  
  
 
@@ -28,6 +28,9 @@ jobs:
     steps:
     - name: bash
       run: |
-        echo "${{ github.event.pull_request.base.ref }}"
+        if [[ "$VAR" == "FACU1" ]];then
+          echo "it is ok"
+        fi
+        
 
      
