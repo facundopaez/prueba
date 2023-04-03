@@ -3,7 +3,7 @@
 name: CI
 env:
   VAR: "DEV"
-  USER: ${{ secrets.NAME_$VAR }}
+  USER: ${{ secrets.NAME_${VAR} }}
  
 
 # Controls when the workflow will run
