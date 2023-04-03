@@ -27,6 +27,6 @@ jobs:
     steps:
     - shell: bash
       run: |
-        echo "$USER ----"
+        echo "${{ env.USER }} ----"
 
      
