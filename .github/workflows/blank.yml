@@ -28,6 +28,6 @@ jobs:
     steps:
     - name: bash
       run: |
-        echo "${{ envs.GITHUB_BASE_REF }}"
+        echo "$GITHUB_BASE_REF"
 
      
