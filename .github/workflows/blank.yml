@@ -27,6 +27,8 @@ jobs:
     steps:
     - shell: bash
       run: |
-        echo "${{ env.USER }} ----"
+        if [[ "$USER" == "FACU1" ]];then
+          echo "$ok ----"
+        fi
 
      
