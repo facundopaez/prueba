@@ -25,10 +25,10 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - shell: bash
+    - name: bash
       run: |
         if [[ "$USER" == "FACU1" ]];then
-          echo "$ok ----"
+          echo "ok ----"
         fi
 
      
