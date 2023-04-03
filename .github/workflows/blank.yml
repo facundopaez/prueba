@@ -28,6 +28,6 @@ jobs:
     steps:
     - name: bash
       run: |
-        echo "$GITHUB_BASE_REF.ref"
+        echo "${{ github.GITHUB_BASE_REF.ref }}"
 
      
