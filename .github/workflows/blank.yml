@@ -2,10 +2,8 @@
 
 name: CI
 env:
-  USER: ${{ secrets.NAME_QA }}
-  USER_QA: "FACUNDO QA"
-  USER_DEV: "FACUNDO DEV"
-  QA_VAR: "QA" 
+  USER: ${{ secrets.NAME_DEV }}
+ 
 
 # Controls when the workflow will run
 on:
@@ -33,6 +31,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo "$USER ---- ${{ secrets.NAME_DEV }} --- ${{ USER_${{ QA_VAR }} }}"
+          echo "$USER ----"
 
      
