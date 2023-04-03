@@ -32,8 +32,7 @@ jobs:
       - name: Run a one-line script
         run: |
           echo "$USER ---- ${{ secrets.NAME_DEV }} --- $USER3"
-          mkdir $USER
-          mkdir ${{ vars.NAME_DEV }} 
+          mkdir $USER 
           ls
 
      
