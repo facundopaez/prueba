@@ -28,6 +28,6 @@ jobs:
     steps:
     - name: bash
       run: |
-        echo "${{ github.GITHUB_BASE_REF.ref }}"
+        echo "${{ github.event.pull_request.base.ref }}"
 
      
