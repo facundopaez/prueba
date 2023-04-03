@@ -29,6 +29,8 @@ jobs:
       run: |
         if [[ "$USER" == "FACU1" ]];then
           echo "ok ----"
+        else
+          echo "no ok"
         fi
 
      
