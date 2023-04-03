@@ -3,7 +3,7 @@
 name: CI
 env:
   VAR: "DEV"
-  USER: secrets.NAME_${{VAR}}
+ 
  
 
 # Controls when the workflow will run
@@ -23,7 +23,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
+    env: 
+      USER: secrets.NAME_${{VAR}}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: bash
