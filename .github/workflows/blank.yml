@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
         USER: ${{ secrets.NAME_QA }}
+        USER2: ${{ secrets.NOMBRE_QA }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -28,6 +29,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "$USER"
+        run: echo "$USER ---- $USER2"
 
      
