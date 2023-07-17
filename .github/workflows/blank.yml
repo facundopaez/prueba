@@ -1,11 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
 name: CI
-env:
-  AWS: ${{ secrets.AWS }}
-  VAR1: ${{ vars.VAR1 }}
-  VAR2: ${{ vars.VAR2 }}
-  VAR3: ${{ vars.VAR3 }}
+
  
  
 
@@ -20,6 +16,11 @@ on:
     branches: 
       - master
       - dev
+env:
+  AWS: ${{ secrets.AWS }}
+  VAR1: ${{ vars.VAR1 }}
+  VAR2: ${{ vars.VAR2 }}
+  VAR3: ${{ vars.VAR3 }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
