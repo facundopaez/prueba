@@ -29,7 +29,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     environment:
-      name: dev
+      name: ${{ github.base_ref }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
@@ -45,6 +45,7 @@ jobs:
         echo "VAR1: $VAR1"
         echo "VAR2: $VAR2 "
         echo "VAR3: $VAR3 "
+        echo "${{ github.base_ref }}"
         
         
 
