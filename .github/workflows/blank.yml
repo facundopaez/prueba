@@ -3,8 +3,8 @@
 name: CI
 env:
   AWS: ${{ secrets.AWS }}
-  VAR1: ${{ ENV.VAR1 }}
-  VAR2: ${{ ENV.VAR2 }}
+  VAR1: ${{ vars.VAR1 }}
+  VAR2: ${{ vars.VAR2 }}
  
  
 
