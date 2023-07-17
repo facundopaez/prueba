@@ -35,9 +35,9 @@ jobs:
     - name: bash
       run: |
         echo "AWS: ${{ secrets.AWS }}"
-        echo "VAR1: ${{ ENV.VAR1 }}"
-        echo "VAR2: ${{ ENV.VAR2 }}"
-        echo "VAR3: ${{ ENV.VAR3 }}"
+        echo "VAR1: ${{ VARS.VAR1 }}"
+        echo "VAR2: ${{ VARS.VAR2 }}"
+        echo "VAR3: ${{ VARS.VAR3 }}"
         echo "---------------------"
         echo "AWS: $AWS"
         echo "VAR1: $VAR1"
