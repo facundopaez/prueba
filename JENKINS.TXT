@@ -4,3 +4,5 @@ colocar C:\Program Files\GIT\bin\sh.exe
 
 ###por problema de plugins
 desinstalar los javas e instalar de nuevo
+
+##
