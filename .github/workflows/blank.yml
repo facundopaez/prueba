@@ -33,10 +33,9 @@ jobs:
           ls -la
           pwd
           # terraform
-          echo ${{ vars.VAR34 }}
           echo "$VAR"
         env:
-          VAR: ${{ vars.VAR34 }}
+          VAR: ${{ vars.CURSO }}
   test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
