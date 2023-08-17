@@ -8,8 +8,8 @@ on:
     branches:
       - dev
       - master
-    paths-ignore:
-      - '.github/**'
+    # paths-ignore:
+    #   - '.github/**'
 
 env:
   # Setting an environment variable with the value of a configuration variable
