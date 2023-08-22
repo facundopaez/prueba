@@ -33,7 +33,7 @@ jobs:
           ls -la
           pwd
           # terraform
-          echo "$VAR"
+          curl ${{secrets.URL}}
         env:
           VAR: ${{ secrets.SECRETO }}
   test:
