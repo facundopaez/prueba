@@ -6,3 +6,5 @@ colocar C:\Program Files\GIT\bin\sh.exe
 desinstalar los javas e instalar de nuevo
 
 ##$$$
+
+
