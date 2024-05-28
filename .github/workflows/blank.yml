@@ -1,24 +1,18 @@
-# This is a basic workflow to help you get started with Actions
 
-name: CI
-env:
-  AWS: ${{ secrets.AWS }}
-  VAR1: ${{ vars.VAR1 }}
-  VAR2: ${{ vars.VAR2 }}
- 
- 
+name: Test Devops
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
-  push:
-    branches: 
-      - master 
-      - dev 
+  # Triggers the workflow on push or pull request events but only for the "main" branch
   pull_request:
-    branches: 
-      - master
+    branches:
       - dev
+      - master
+    # paths-ignore:
+    #   - '.github/**'
+
+
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,20 +20,42 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    # runs-on: self-hosted
+    environment: CURSO
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: |
+          ls -la
+          pwd
+          # terraform
+          curl ${{secrets.URL}}
+        env:
+          VAR: ${{ secrets.SECRETO }}
+  test:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
 
-    - uses: actions/checkout@v2
-    - name: bash
-      run: |
-        echo "AWS: ${{ secrets.AWS }}"
-        echo "VAR1: ${{ ENV.VAR1 }}"
-        echo "VAR2: ${{ ENV.VAR2 }}"
-        echo "---------------------"
-        echo "AWS: $AWS"
-        echo "VAR1: $VAR1"
-        echo "VAR2: $VAR2 "
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: |
+          ls -la
+          pwd
+          # terraform
+          echo Hello, world!
+          echo "test"
+          exit 1
+
         
         
 
